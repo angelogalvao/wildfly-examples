@@ -14,25 +14,26 @@ This project shows how to connect throught JDNI directly to IBM MQ context to se
 
 IBM MQ container image is not available to Mac M1 chips. If you are running your developer enviroment in M1 Mac, you need to muild IBM MQ image locally, by running the following:
 
-    - Make the container image:
-```sh
-git clone https://github.com/ibm-messaging/mq-container.git
-cd mq-container
-make build-devserver
-```
+- Make the container image:
 
-    - To verify if it was correctly installed, just run the following:
+    ```sh
+    git clone https://github.com/ibm-messaging/mq-container.git
+    cd mq-container
+    make build-devserver
+    ```
+
+- To verify if it was correctly installed, just run the following:
 
 ```sh
 podman images
 ```
-    - Tag the image to latest, change the name of the image and version with the output of your enviroment:
+- Tag the image to latest, change the name of the image and version with the output of your enviroment:
 
 ```sh
 podman tag localhost/ibm-mqadvanced-server-dev:9.4.1.0-arm64 ibmcom/mq:latest
 ```
 
-    - If everything is correct, you can delete the mq-container project.
+- If everything is correct, you can delete the mq-container project.
 
 2. Create the secrets for IBM MQ admin and app users:
 
@@ -79,15 +80,15 @@ podman run \
 
 1. Install the IBM MQ Resource adapter in Wildfly:
 
-    1.1. Download the lastest IBM MQ RA from IBM web page. The page on the time of this write is this [one](https://www.ibm.com/support/fixcentral/swg/selectFixes?parent=ibm~WebSphere&product=ibm/WebSphere/WebSphere+MQ&release=9.4.0.0&platform=All&function=fixId&fixids=*IBM-MQ-Install-Java-All*&includeSupersedes=0&source=fc)
+1.1. Download the lastest IBM MQ RA from IBM web page. The page on the time of this write is this [one](https://www.ibm.com/support/fixcentral/swg/selectFixes?parent=ibm~WebSphere&product=ibm/WebSphere/WebSphere+MQ&release=9.4.0.0&platform=All&function=fixId&fixids=*IBM-MQ-Install-Java-All*&includeSupersedes=0&source=fc)
 
-    1.2. Extract the file (Accept the license also):
+1.2. Extract the file (Accept the license also):
 
 ```sh
 java -jar <version>-IBM-MQ-Install-Java-All.jar
 ```
 
-    1.3. Install extracted IBM MQ resource adapter on Wildfly/JBoss EAP:
+1.3. Install extracted IBM MQ resource adapter on Wildfly/JBoss EAP:
 ```sh
 cd /path/to/wildfly
 bin/jboss-cli.sh --connect
