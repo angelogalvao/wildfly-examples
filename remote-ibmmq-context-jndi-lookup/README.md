@@ -6,7 +6,7 @@ This project shows how to connect throught JDNI directly to IBM MQ context to se
 
 - Eclispe with IBM MQ Explorer plugin installed.
 
-# IBM MQ configuration
+## IBM MQ configuration
 
 1. Install docker or podman (this is not explained here).
 
@@ -76,7 +76,7 @@ podman run \
     - General -> Queue: DEV.QUEUE.1
 
 
-# Wildfly configuration and deployment
+## Wildfly configuration and deployment
 
 1. Install the IBM MQ Resource adapter in Wildfly:
 
@@ -121,7 +121,7 @@ module add --name=com.ibm.mq --resources=/path/to/extracted/jar/wmq/JavaSE/lib/m
 mvn wildfly:deploy 
 ```
 
-# Test the integration
+## Test the integration
 
 1. Just run the following:
 
