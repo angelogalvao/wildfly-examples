@@ -12,7 +12,7 @@ This project shows how to connect throught JDNI directly to IBM MQ context to se
 
     1.1. (Optional) IBM MQ Mac M1 chips:
 
-IBM MQ container image is not available to Mac M1 chips. If you are running your developer enviroment in M1 Mac, you need to muild IBM MQ image locally, by running the following:
+IBM MQ container image is not available to Mac M1 chips. If you are running your developer enviroment in M1 Mac, you need to build IBM MQ image locally, by running the following:
 
 - Make the container image:
 
@@ -58,7 +58,7 @@ podman run \
   ibmcom/mq
 ```
 
-4. Create the ConnectionFactory and Queue binding file that the Wildfly uses to access IBM MQ objects by JNDI:
+4. Create the ConnectionFactory and Queue binding file that the Wildfly uses to access IBM MQ objects by JNDI (it will create the file .bindings):
 
     4.1. On MQ Explorer Navigator (Eclipse), on folder Queue Managers, create an connection to the queue manager QM1 (The one that we create above).
 
