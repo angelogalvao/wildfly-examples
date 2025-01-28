@@ -1,0 +1,7 @@
+<jboss-deployment-structure>
+  <deployment>
+      <dependencies>
+         <!-- <module name="ibm.mq"/> -->
+      </dependencies>
+    </deployment>
+</jboss-deployment-structure>
