@@ -14,25 +14,25 @@ This project shows how to connect throught JDNI directly to IBM MQ context to se
 
 IBM MQ container image is not available to Mac M1 chips. If you are running your developer enviroment in M1 Mac, you need to muild IBM MQ image locally, by running the following:
 
-        1.1.1. Make the container image (Notice that th):
+    - Make the container image:
 ```sh
 git clone https://github.com/ibm-messaging/mq-container.git
 cd mq-container
 make build-devserver
 ```
 
-        1.1.2. To verify if it was correctly installed, just run the following:
+    - To verify if it was correctly installed, just run the following:
 
 ```sh
 podman images
 ```
-        1.1.3. Tag the image to latest, change the name of the image and version with the output of your enviroment:
+    - Tag the image to latest, change the name of the image and version with the output of your enviroment:
 
 ```sh
 podman tag localhost/ibm-mqadvanced-server-dev:9.4.1.0-arm64 ibmcom/mq:latest
 ```
 
-        1.1.4. If everything is correct, you can delete the mq-container project.
+    - If everything is correct, you can delete the mq-container project.
 
 2. Create the secrets for IBM MQ admin and app users:
 
