@@ -437,7 +437,7 @@
                     <external-context name="java:global/sharedBrokerContext" module="org.apache.activemq.artemis" class="javax.naming.InitialContext">
                         <environment>
                             <property name="java.naming.factory.initial" value="org.wildfly.naming.client.WildFlyInitialContextFactory"/>
-                            <property name="java.naming.provider.url" value="http-remoting://remotehost:8081?useKQueue=false"/>
+                            <property name="java.naming.provider.url" value="http-remoting://localhost:8081?useKQueue=false"/>
                             <property name="queue.TestQueue" value="TestQueue"/>
                         </environment>
                     </external-context>

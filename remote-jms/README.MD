@@ -37,7 +37,7 @@ Notice that I created the user "broker"with the role "guest" in Wildfly.
         <external-context name="java:global/sharedBrokerContext" module="org.apache.activemq.artemis" class="javax.naming.InitialContext">
             <environment>
                 <property name="java.naming.factory.initial" value="org.wildfly.naming.client.WildFlyInitialContextFactory"/>
-                <property name="java.naming.provider.url" value="http-remoting://remotehost:8081?useKQueue=false"/>
+                <property name="java.naming.provider.url" value="http-remoting://localhost:8081?useKQueue=false"/>
                 <property name="queue.TestQueue" value="TestQueue"/>
             </environment>
         </external-context>
@@ -45,7 +45,7 @@ Notice that I created the user "broker"with the role "guest" in Wildfly.
     <remote-naming/>
 </subsystem>
 ~~~
-Notice that port 8081 = default 8080 port + 1 port offset of the server group.
+Notice that port 8081 = default 8080 port + 1 port offset of the server group. 
 
 5. Configure the outboud socket binding that points to the remote broker endpoint:
 
